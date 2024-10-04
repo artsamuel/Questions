@@ -1,0 +1,26 @@
+function isFibonacci(num) {
+    let a = 0;
+    let b = 1;
+
+    if (num === a || num === b) return true;
+
+    let next = a + b;
+
+    while (next <= num) {
+        if (next === num) return true;
+
+        a = b;
+        b = next;
+        next = a + b;
+    }
+
+    return false;
+}
+
+let inputNumber = parseInt(prompt("Informe um número:"));
+
+if (isFibonacci(inputNumber)) {
+    console.log(inputNumber + " pertence à sequência de Fibonacci.");
+} else {
+    console.log(inputNumber + " não pertence à sequência de Fibonacci.");
+}
