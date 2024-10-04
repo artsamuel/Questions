@@ -1,0 +1,19 @@
+function countLetterA(str) {
+    let lowerCaseStr = str.toLowerCase();
+    let count = 0;
+
+    for (let i = 0; i < lowerCaseStr.length; i++) {
+        if (lowerCaseStr[i] === 'a') {
+            count++;
+        }
+    }
+
+    if (count > 0) {
+        console.log(`A letra 'a' aparece ${count} vezes na string.`);
+    } else {
+        console.log("A letra 'a' não aparece na string.");
+    }
+}
+
+let inputString = prompt("Informe uma string:");
+countLetterA(inputString);
